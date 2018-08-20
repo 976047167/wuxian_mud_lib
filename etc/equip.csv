@@ -1,0 +1,4 @@
+d,name,eid,valid_comb,type,subtype,p_att,s_att,p_def,s_def
+10001,新手长剑,changjian,0,1,1,10,10,0,0
+10002,布衣,cloth,0,2,1,0,0,10,10
+
