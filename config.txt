@@ -35,10 +35,10 @@ include directories : /include
 save binaries directory : /binaries
  
 # the file which defines the master object
-master file : /adm/obj/master
+master file : /adm/single/master
  
 # the file where all global simulated efuns are defined.
-simulated efun file : /adm/obj/simul_efun
+simulated efun file : /adm/single/simul_efun
  
 # file to swap out objects; not used if time to swap is 0
 swap file : /adm/tmp/swapfile
