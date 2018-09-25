@@ -22,9 +22,9 @@ void setup()
 		tmp = iexplode(s[i],",");
 		int equip_id;
 		sscanf(tmp[EQUIP_ID],"%d",equip_id);
-		if(!intp(equip_id))  //æ³¨é‡Šï¼Œæˆ–å…¶ä»–é”™è¯¯ã€‚ã€‚ã€‚ã€‚
+		if(!intp(equip_id))  //×¢ÊÍ£¬»òÆäËû´íÎó¡£¡£¡£¡£
 			continue;
-		if(sizeof(tmp)!=EQUIP_CHECK) {//è¿™æ ·æ¥è¯´ï¼Œè¿™è¡Œè‚¯å®šæœ‰é”™ï¼Œä¹Ÿå¯èƒ½æ˜¯åˆ†éš”ç¬¦é”™è¯¯ï¼ŒæŠ›å‡ºlog
+		if(sizeof(tmp)!=EQUIP_CHECK) {//ÕâÑùÀ´Ëµ£¬ÕâĞĞ¿Ï¶¨ÓĞ´í£¬Ò²¿ÉÄÜÊÇ·Ö¸ô·û´íÎó£¬Å×³ölog
 			log_file("equip_log",EQUIP_FILE+" wrong with line "+i+"\n");
 			continue;
 		}
@@ -39,11 +39,11 @@ void setup()
 
 object setup_equip(object ob,int id,string arg)
 {
-	//å…ˆä¸ç®¡argã€‚ã€‚ã€‚ã€‚
+	//ÏÈ²»¹Üarg¡£¡£¡£¡£
 	if(!undefinedp(equips[id])) {
 		ob->set("iid",equips[id][EQUIP_ID]); //item_id ....
 		ob->set("name",equips[id][EQUIP_NAME]);
-		ob->set("id",equips[id][EQUIP_EID]);//ç”¨äºè¿›è¡ŒpresentæŸ¥è¯¢çš„è‹±æ–‡id,eid
+		ob->set("id",equips[id][EQUIP_EID]);//ÓÃÓÚ½øĞĞpresent²éÑ¯µÄÓ¢ÎÄid,eid
 		ob->set("valid_comb",equips[id][EQUIP_VALID_COMB]);
 		ob->set("type",equips[id][EQUIP_TYPE]);
 		ob->set("subtype",equips[id][EQUIP_SUBTYPE]);
@@ -52,6 +52,6 @@ object setup_equip(object ob,int id,string arg)
 		ob->set("p_def",equips[id][EQUIP_P_DEF]);
 		ob->set("s_def",equips[id][EQUIP_S_DEF]);
 	}
-	//å†å¤„ç†arg
+	//ÔÙ´¦Àíarg
 	return ob;
 }
