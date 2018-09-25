@@ -44,7 +44,7 @@ varargs void enter_world(object ob,int relogin)
 void logon(object ob)
 {
 //	write(HIY+read_file(WELCOME)+NOR);
-	write("欢迎来到测试MUD\n请输入您的ID:");
+	write("欢迎来到测试MUD\n请输入您的ID:\n");
 	input_to("get_id", ob);
 }
 
@@ -54,7 +54,7 @@ void get_id(string arg,object ob)
 	ob->set("id",arg);
 	if( file_size(ob->query_save_file() + __SAVE_EXTENSION__) >= 0 ) {
 		if(ob->restore()) {
-			write("读取登录数据成功，请输入密码：");
+			write("读取登录数据成功，请输入密码：\n");
 			input_to("get_passwd",ob);
 		} else {
 			write("读取登录数据失败，无法进入游戏，强制断线。\n");
@@ -62,11 +62,11 @@ void get_id(string arg,object ob)
 		}
 	} else { //no data,it's a new user
 		if(check_legal_id(arg)>0) {
-			write("欢迎，新来的。。。。请输入中文名:");
+			write("欢迎，新来的。。。。请输入中文名:\n");
 			//input_to("new_passwd",ob);
 			input_to("get_name",ob);
 		} else {
-			write("ID不合法，应该为3～10位的小写英文字母，请重新输入：");
+			write("ID不合法，应该为3～10位的小写英文字母，请重新输入：\n");
 			input_to("get_id", ob);
 		}
 	}
@@ -85,7 +85,7 @@ void get_name(string arg,object ob)
 void new_passwd(string arg,object ob)
 {
 	ob->set("passwd",arg);
-	write("再次输入密码：");
+	write("再次输入密码：\n");
 	input_to("confirm_passwd",ob);
 }
 
@@ -111,7 +111,7 @@ void confirm_passwd(string arg,object ob)
 		exec(usr,ob);
 		enter_world(usr,0);
 	} else {
-		write("两次输入密码不同，请重新输入密码：");
+		write("两次输入密码不同，请重新输入密码：\n");
 		input_to("new_passwd",ob);
 	}
 }
