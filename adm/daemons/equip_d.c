@@ -12,15 +12,14 @@ void create()
 void setup()
 {
 	mixed s;
-	int i,j,sz;
+	int i,j,sz,equip_id;
 	mixed tmp;//,tmp2;
 	s = seperate_file(EQUIP_FILE);
 	sz = sizeof(s);
 	for(i=0;i<sz;i++) {
 		if(!stringp(s[i]) || s[i]=="")
 			continue;
-		tmp = iexplode(s[i],",");
-		int equip_id;
+		tmp = explode(s[i],",");
 		sscanf(tmp[EQUIP_ID],"%d",equip_id);
 		if(!intp(equip_id))  //×¢ÊÍ£¬»òÆäËû´íÎó¡£¡£¡£¡£
 			continue;

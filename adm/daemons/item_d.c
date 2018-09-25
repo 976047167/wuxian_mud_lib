@@ -17,7 +17,7 @@ object create_item(string arg)
 	// check arg ...
 	switch(item_type) {
 	case ITEM_EQUIP :
-		ob = EQUIP_D->setup_equip(ob,tmp[0],arg);
+		ob = EQUIP_D->setup_equip(ob,item_id,arg);
 		break;
 	default :
 		break;

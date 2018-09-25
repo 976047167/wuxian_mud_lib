@@ -8,6 +8,7 @@
 #define LOGIN_OB		"/clone/login.c"
 #define CLASS_OB		"/clone/class_container.c"
 #define ITEM_OB			"/clone/item.c"
+#define MOVE_OB			"/clone/mob.c"
 
 #define CMD_D			"/adm/daemons/cmd_d.c"
 #define LOGIN_D			"/adm/daemons/login_d.c"

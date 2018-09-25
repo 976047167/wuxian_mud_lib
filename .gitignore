@@ -1,3 +1,4 @@
 /log/
 ffos.log
-adm/log/debug.log
+/adm/log/debug.log
+/data/

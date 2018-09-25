@@ -7,7 +7,7 @@ inherit F_ROOM_DBASE;
 int add_mob()
 {
 	object mob;
-	mob = new("/obj/mob.c");
+	mob = new(MOVE_OB);
 	mob->move(this_object());
 }
 
