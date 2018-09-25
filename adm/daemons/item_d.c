@@ -8,9 +8,11 @@ object create_item(string arg)
 {
 	object ob;
 	mixed tmp;
+	int item_id;
 	int item_type;
-	tmp = iexplode(arg,",");
-	item_type = tmp[0]/10000;
+	tmp = explode(arg,",");
+	sscanf(tmp[0],"%d",item_id);
+	item_type = item_id/10000;
 	ob = new(ITEM_OB);
 	// check arg ...
 	switch(item_type) {

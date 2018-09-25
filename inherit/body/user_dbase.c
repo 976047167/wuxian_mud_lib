@@ -3,7 +3,7 @@
 // 2010-05-11
 inherit F_NAME;
 mapping dbase = ([]);
-nosave mapping tmp_dbase = ([]);
+static mapping tmp_dbase = ([]);
 
 
 mixed set_tmp(mixed prop,mixed data)

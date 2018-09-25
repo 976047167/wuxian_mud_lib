@@ -1,0 +1,37 @@
+
+<---无限lib: MudOS v22.2pre11Build1 (by fang q 184377367 [driver],Jan 13 2017) startup on Microsoft Windows NT at Tue Sep 25 09:31:17 2018
+
+Initializing internal tables....
+using config file: F:\wuxian_lib\config.txt
+open adm/log/debug.log file failed.
+
+<---无限lib: MudOS v22.2pre11Build1 (by fang q 184377367 [driver],Jan 13 2017) shutdown at Tue Sep 25 09:31:17 2018
+
+
+
+
+<---无限lib: MudOS v22.2pre11Build1 (by fang q 184377367 [driver],Jan 13 2017) startup on Microsoft Windows NT at Tue Sep 25 09:41:56 2018
+
+using config file: F:\wuxian_lib\config.txt
+Can't find "mudos", ignoring old binaries.
+Try invoking the driver using the full pathname.
+Connected to address server on 127.0.0.1 port 4444
+
+Loading preloaded files ...
+Initializations complete.
+
+Accepting connections on port 4242.
+Initializing internal tables....
+
+<---无限lib: MudOS v22.2pre11Build1 (by fang q 184377367 [driver],Jan 13 2017) startup on Microsoft Windows NT at Tue Sep 25 09:43:13 2018
+
+using config file: F:\wuxian_lib\config.txt
+Can't find "mudos", ignoring old binaries.
+Try invoking the driver using the full pathname.
+Connected to address server on 127.0.0.1 port 4444
+
+Loading preloaded files ...
+Initializations complete.
+
+Accepting connections on port 4242.
+Initializing internal tables....

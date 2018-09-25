@@ -1,4 +1,4 @@
-nosave mixed enemies = ({});
+static mixed enemies = ({});
 varargs int is_fighting(object him)
 {
 	int i,size;
