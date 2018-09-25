@@ -4,10 +4,10 @@
 #define LOG_DIR 		"/log/"
 #define DATA_DIR		"/data/"
 
-#define USER_OB			"/obj/user.c"
-#define LOGIN_OB		"/obj/login.c"
-#define CLASS_OB		"/obj/class_container.c"
-#define ITEM_OB			"/obj/item.c"
+#define USER_OB			"/clone/user.c"
+#define LOGIN_OB		"/clone/login.c"
+#define CLASS_OB		"/clone/class_container.c"
+#define ITEM_OB			"/clone/item.c"
 
 #define CMD_D			"/adm/daemons/cmd_d.c"
 #define LOGIN_D			"/adm/daemons/login_d.c"
