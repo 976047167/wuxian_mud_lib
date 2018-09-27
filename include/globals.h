@@ -30,6 +30,7 @@
 #define F_ROOM			"/feature/room.c"
 #define F_NAME			"/feature/body/name.c"
 #define F_ATTACK		"/feature/body/attack.c"
+#define F_TREE_MAP		"/feature/body/treemap.c"
 
 #define START_ROOM		"/d/wiz/center.c"
 
