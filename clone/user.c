@@ -56,7 +56,7 @@ int setup()
 	set_living_name(query("id"));
 	enable_commands();
 	add_action("cmd_hook","",1);
-	// ×¢²áÐÄÌø
+	// Ã—Â¢Â²Ã¡ÃÃ„ÃŒÃ¸
 	set_heart_beat(1);
 	return 1;
 }
@@ -86,15 +86,15 @@ string query_save_file()
 void net_dead()
 {
 	object link_ob;
-	if( objectp(link_ob = query_tmp("link_ob")) )
+	if( objectp(link_ob = query_temp("link_ob")) )
 		destruct(link_ob);
-	set_tmp("netdead",1);
+	set_temp("netdead",1);
 	call_out("user_dump",30); // 5 min to quit
 }
 
 void user_dump()
 {
-	if(query_tmp("netdead")) {
+	if(query_temp("netdead")) {
 		CMD_QUIT->main(this_object());
 	}
 }

@@ -1,8 +1,21 @@
-// by akuma@mud.com.cn
+// securityd.c
+#pragma optimize
+#pragma save_binary
+
+inherit F_SAVE;
 mapping security = ([]);
-mapping cmdpath = (["player":({"/cmds/usr/"}),"gm":({"/cmds/usr/","/cmds/gm/"})]);
+mapping cmdpath = ([
+					"player":({"/cmds/usr/"}),
+					"gm":({"/cmds/usr/","/cmds/gm/"})
+					]);
 void setup();
 void setup_player_cmd_path(object ob);
+
+
+string query_save_file()
+{
+        return DATA_DIR "security_d";
+}
 void create()
 {
 	setup();
@@ -35,9 +48,9 @@ void setup_player_security(object ob)
 	string id;
 	id = ob->query("id");
 	if(!undefinedp(security[id])) {
-		ob->set_tmp("slevel",security[id]);
+		ob->set_temp("slevel",security[id]);
 	} else {
-		ob->set_tmp("slevel","player");
+		ob->set_temp("slevel","player");
 	}
 	setup_player_cmd_path(ob);
 }
@@ -45,10 +58,10 @@ void setup_player_security(object ob)
 void setup_player_cmd_path(object ob)
 {
 	string slevel;
-	slevel = ob->query_tmp("slevel");
+	slevel = ob->query_temp("slevel");
 	if(!undefinedp(cmdpath[slevel])) {
-		ob->set_tmp("cmdpath",cmdpath[slevel]);
+		ob->set_temp("cmdpath",cmdpath[slevel]);
 	} else {
-		ob->set_tmp("cmdpath",cmdpath["player"]);
+		ob->set_temp("cmdpath",cmdpath["player"]);
 	}
 }

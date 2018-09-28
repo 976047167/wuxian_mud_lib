@@ -1,6 +1,8 @@
+#pragma save_binary
 #ifndef __GLOBALS_H__
 #define __GLOBALS_H__
 #include <ansi.h>
+#include <syntax.h>
 #define LOG_DIR 		"/log/"
 #define DATA_DIR		"/data/"
 
@@ -20,17 +22,14 @@
 #define EQUIP_D			"/adm/daemons/equip_d.c"
 #define COMBAT_D		"/adm/daemons/combat_d.c"
 
-#define F_DBASE			"/feature/body/user_dbase.c"
-#define F_ITEM_DBASE	"/feature/body/item_dbase.c"
-#define F_MOB_DBASE		"/feature/body/mob_dbase.c"
+#define F_DBASE			"/feature/body/dbase.c"
 #define F_SAVE			"/feature/body/user_save.c"
 #define F_MOVE			"/feature/body/move.c"
 #define F_ITEM_MOVE		"/feature/body/item_move.c"
-#define F_ROOM_DBASE	"/feature/body/room_dbase.c"
 #define F_ROOM			"/feature/room.c"
 #define F_NAME			"/feature/body/name.c"
 #define F_ATTACK		"/feature/body/attack.c"
-#define F_TREE_MAP		"/feature/body/treemap.c"
+#define F_TREEMAP		"/feature/body/treemap.c"
 
 #define START_ROOM		"/d/wiz/center.c"
 
@@ -41,4 +40,8 @@
 #define WIZLIST			"/etc/wizlist"
 #define WELCOME			"/etc/welcome"
 #define LEVEL_MODIFY		"/etc/level_modify"
+
+
+// User IDs
+#define ROOT_UID        "Root"
 #endif

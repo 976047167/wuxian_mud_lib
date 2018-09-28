@@ -1,5 +1,5 @@
 //
-inherit F_MOB_DBASE;
+inherit F_DBASE;
 inherit F_MOVE;
 
 int setup();

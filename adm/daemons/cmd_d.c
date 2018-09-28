@@ -8,7 +8,7 @@ int do_cmd(object me,string verb,string arg)
 	object cmd;
 	mixed cmdpath;
 	int i;
-	cmdpath = me->query_tmp("cmdpath");
+	cmdpath = me->query_temp("cmdpath");
 	for(i=sizeof(cmdpath)-1;i>=0;i--) {
 		cmd = load_object(cmdpath[i]+verb);
 		if(objectp(cmd))

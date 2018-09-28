@@ -2,7 +2,7 @@
 // created by akuma@mud.com.cn
 // 2009-10-07
 
-inherit F_ROOM_DBASE;
+inherit F_DBASE;
 
 int add_mob()
 {

@@ -73,7 +73,7 @@ int main(object me,string arg)
 		else {
 			for(i=0;i<size;i++) {
 				if(inv[i]!=me)
-					desc +="  "+inv[i]->query("name")+"("+inv[i]->query("id")+")"+((inv[i]->query_tmp("netdead")?"<断线中>":""))+"\n";
+					desc +="  "+inv[i]->query("name")+"("+inv[i]->query("id")+")"+((inv[i]->query_temp("netdead")?"<断线中>":""))+"\n";
 			}
 		}
 		write(desc);

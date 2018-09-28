@@ -187,8 +187,8 @@ nomask void set_dbase(mapping data)
 
 nomask void set_temp_dbase(mapping data)
 {
-        if (! is_root(previous_object()))
-                return;
+        // if (! is_root(previous_object()))
+        //         return;
                   
         if (! mapp(data)) 
                 return;
@@ -198,16 +198,16 @@ nomask void set_temp_dbase(mapping data)
 
 nomask void delete_all_dbase()
 {
-        if (! is_root(previous_object()))
-                return;
+        // if (! is_root(previous_object()))
+        //         return;
                 
         dbase = ([]);
 }
 
 nomask void delete_all_temp_dbase()
 {
-        if (! is_root(previous_object()))
-                return;
+        // if (! is_root(previous_object()))
+        //         return;
                         
         tmp_dbase = ([]);
 }

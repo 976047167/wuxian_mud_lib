@@ -19,14 +19,14 @@ void create()
 void logon()
 {
 	call_out("login_timeout",60);
-	set_tmp("login_temp",1);
+	set_temp("login_temp",1);
 	LOGIN_D->logon(this_object());
 }
 
 void login_timeout()
 {
 	tell_object(this_object(),"login_timeout");
-	if(query_tmp("login_temp"))
+	if(query_temp("login_temp"))
 		destruct(this_object());
 }
 

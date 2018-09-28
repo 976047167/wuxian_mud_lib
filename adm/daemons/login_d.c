@@ -28,10 +28,10 @@ varargs void enter_world(object ob,int relogin)
 {
 	mixed slevel;
 	slevel = SECURITY_D->setup_player_security(ob);
-	write("目前权限："+ob->query_tmp("slevel")+"\n");
-	write("目前指令目录："+sprintf("%O",ob->query_tmp("cmdpath"))+"\n");
+	write("目前权限："+ob->query_temp("slevel")+"\n");
+	write("目前指令目录："+sprintf("%O",ob->query_temp("cmdpath"))+"\n");
 	
-	ob->set_tmp("login_ok",1);
+	ob->set_temp("login_ok",1);
 	if(!relogin) {
 		ob->setup();
 		ob->move(START_ROOM);
@@ -103,8 +103,8 @@ void confirm_passwd(string arg,object ob)
 		usr->set("birth",time);
 		usr->set("id",ob->query("id"));
 		usr->set("name",ob->query("name"));
-		usr->set_tmp("login_ob",ob);
-		ob->delete_tmp("login_temp");
+		usr->set_temp("login_ob",ob);
+		ob->delete_temp("login_temp");
 		CHAR_D->setup_new_player(usr);
 		ret = usr->save();
 		write("游戏数据存盘结果："+ret+"\n");
@@ -126,14 +126,14 @@ void get_passwd(string arg,object ob)
 			usr = new(USER_OB);
 			usr->set("id",ob->query("id"));
 			ret = usr->restore();
-		} else if(!usr->query_tmp("netdead")){
-			old_link = usr->query_tmp("login_ob");
+		} else if(!usr->query_temp("netdead")){
+			old_link = usr->query_temp("login_ob");
 			tell_object(usr,"有人重新登录，取代了你的连线，再见。。。\n");
 			exec(old_link,usr);
 			destruct(old_link);
 			ret = -1;
 		} else {
-			usr->delete_tmp("netdead");
+			usr->delete_temp("netdead");
 			ret = -1;
 		}
 		if(ret) {
@@ -145,8 +145,8 @@ void get_passwd(string arg,object ob)
 			printf("%O\n",usr);
 			ob->set("last_login",time());
 			ob->save();
-			ob->delete_tmp("login_temp");
-			usr->set_tmp("login_ob",ob);
+			ob->delete_temp("login_temp");
+			usr->set_temp("login_ob",ob);
 			if(ret > 0)
 				enter_world(usr,0);
 			else
