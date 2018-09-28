@@ -56,7 +56,7 @@ int setup()
 	set_living_name(query("id"));
 	enable_commands();
 	add_action("cmd_hook","",1);
-	// Ã—Â¢Â²Ã¡ÃÃ„ÃŒÃ¸
+	// ×¢²áĞÄÌø
 	set_heart_beat(1);
 	return 1;
 }

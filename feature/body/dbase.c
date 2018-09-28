@@ -60,8 +60,10 @@ mixed set(string prop, mixed data)
 
 varargs mixed query(string prop, int raw)
 {
-        mixed data;
 
+        mixed data;
+        if (!prop)
+            return dbase;
         if (! mapp(dbase)) return 0;
 
         if (undefinedp(dbase[prop]) && (strsrch(prop, '/') != -1))

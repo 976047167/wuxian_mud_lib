@@ -11,6 +11,6 @@ int main(object me,string arg)
 	} else {
 		err = catch(load_object(arg));
 	}
-	printf("编译%s，结果：%O\n",arg,err);	
+	printf("编译%s，结果：%O\n",arg,err);
 	return 1;
 }
