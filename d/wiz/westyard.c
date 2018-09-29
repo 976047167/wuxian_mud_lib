@@ -1,4 +1,4 @@
-inherit F_ROOM;
+inherit ROOM;
 
 void create()
 {
@@ -7,4 +7,7 @@ void create()
 	set("exits",([
 		"east":__DIR__"center",
 	]));
+	setup()
+	replace_program(ROOM);
+
 }

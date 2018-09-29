@@ -1,4 +1,4 @@
-inherit F_ROOM;
+inherit ROOM;
 
 void create()
 {
@@ -9,4 +9,6 @@ void create()
 		"west":__DIR__"westyard",
 	]));
 	add_mob();
+	setup()
+	replace_program(ROOM);
 }

@@ -26,10 +26,13 @@
 #define F_SAVE			"/feature/body/user_save.c"
 #define F_MOVE			"/feature/body/move.c"
 #define F_ITEM_MOVE		"/feature/body/item_move.c"
-#define F_ROOM			"/feature/room.c"
 #define F_NAME			"/feature/body/name.c"
 #define F_ATTACK		"/feature/body/attack.c"
 #define F_TREEMAP		"/feature/body/treemap.c"
+
+
+#define ROOM			"/inherit/room/room.c"
+
 
 #define START_ROOM		"/d/wiz/center.c"
 
