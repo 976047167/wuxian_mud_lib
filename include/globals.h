@@ -1,4 +1,3 @@
-#pragma save_binary
 #ifndef __GLOBALS_H__
 #define __GLOBALS_H__
 #include <ansi.h>
@@ -22,14 +21,14 @@
 #define EQUIP_D			"/adm/daemons/equip_d.c"
 #define COMBAT_D		"/adm/daemons/combat_d.c"
 
-#define F_DBASE			"/feature/body/dbase.c"
-#define F_SAVE			"/feature/body/user_save.c"
-#define F_MOVE			"/feature/body/move.c"
-#define F_ITEM_MOVE		"/feature/body/item_move.c"
-#define F_NAME			"/feature/body/name.c"
-#define F_ATTACK		"/feature/body/attack.c"
-#define F_TREEMAP		"/feature/body/treemap.c"
-
+#define F_DBASE			"/feature/dbase.c"
+#define F_SAVE			"/feature/user_save.c"
+#define F_MOVE			"/feature/move.c"
+#define F_ITEM_MOVE		"/feature/item_move.c"
+#define F_NAME			"/feature/name.c"
+#define F_ATTACK		"/feature/attack.c"
+#define F_TREEMAP		"/feature/treemap.c"
+#define F_CLEAN_UP		"/feature/clean_up.c"
 
 #define ROOM			"/inherit/room/room.c"
 

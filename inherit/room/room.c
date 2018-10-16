@@ -3,7 +3,7 @@
 // 2009-10-07
 
 inherit F_DBASE;
-
+inherit F_CLEAN_UP;
 #define MAX_ITEM_IN_ROOM        30
 object make_inventory(string file)
 void setup()
@@ -41,6 +41,7 @@ void reset()
                                         this_object());
                 }
         }
+        
 		set("no_clean_up", 0);
         ob_list = query("objects");
         if (! mapp(ob_list)) return;
