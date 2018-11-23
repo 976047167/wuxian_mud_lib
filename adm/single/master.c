@@ -72,14 +72,14 @@ void error_handler(mapping error, int caught)
 //get root uid
 string get_root_uid()
 {
-	return "Root";
+	return ROOT_UID;
 }
 
 //master apply::get_bb_uid
 //get backbone uid
 string get_bb_uid()
 {
-	return "Backbone";
+	return BACKBONE_UID;
 }
 
 //master apply::connect
@@ -131,3 +131,18 @@ int valid_socket(object caller, string func, mixed *info)
         return 1;
 }
 
+mixed compile_object(string file)
+{
+        object daemon;
+        mixed ob;
+
+        if (file[0..1]=="/f") {
+                ob = FUBEN_D->compile_object(file);
+                if (objectp(ob))
+                        ob->setup();
+                return ob;
+        } else if (daemon = find_object(VIRTUAL_D))
+                return daemon->compile_object(file);
+        else
+                return 0;
+}
